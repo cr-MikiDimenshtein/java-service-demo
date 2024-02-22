@@ -23,7 +23,10 @@ public class JobService {
         jobStatusRepository.save(jobStatus);
     }
 
-    public List<JobStatus> getAll() {
+    public List<JobStatus> getAll(String status) {
+        if (status != null) {
+            return jobStatusRepository.findByStatus(status);
+        }
         return jobStatusRepository.findAll();
     }
 }

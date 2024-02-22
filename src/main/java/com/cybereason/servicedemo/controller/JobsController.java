@@ -21,8 +21,8 @@ public class JobsController {
     }
 
     @GetMapping(value = "/all", produces = "application/json")
-    public List<JobStatus> getInfo() {
-        return jobService.getAll();
+    public List<JobStatus> getInfo(@RequestParam String status) {
+        return jobService.getAll(status);
     }
 
     @PostMapping(value = "/new", consumes = "application/json", produces = "application/json")

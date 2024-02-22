@@ -22,6 +22,7 @@ public class DemoProperties {
         private String port;
         private String username;
         private String password;
+        private int timeout;
     }
 
 }
